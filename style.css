@@ -1,0 +1,99 @@
+
+.nav-recept{
+    border-bottom: 1px solid black;
+    background-color: #edf0eb;
+}
+
+.form-recept{
+    border-radius: 5px;
+}
+
+.search-box{
+    position: relative;
+  width: 400px;
+
+}
+
+a{
+   display: inline-block;
+    padding: 12px 20px;
+    margin: 5px;
+
+    background-color: rgb(223, 207, 207);
+    color: rgb(131, 85, 97);
+
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+
+.search-box input {
+  width: 100%;
+  height: 48px;
+  padding: 0 50px 0 16px;
+  border: 1px solid #ccc;
+  border-radius: 24px;
+  font-size: 16px;
+  box-sizing: border-box;
+  
+  
+}
+
+h2{
+    text-align: center;
+    color: white;
+}
+
+.search-box button {
+  position: absolute;
+  right: 6px;
+  top: 10%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-size: 20px;
+  color:darkgreen;
+  border-color:darkgreen;
+}
+input:hover{
+    border: 3px solid #274e02;
+}
+
+.container{
+     position: relative;
+  text-align: center;
+  color: white;
+}
+
+.hero{
+      position: relative;
+
+    min-height: 400px;
+
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.35),
+                        rgba(0, 0, 0, 0.35)),
+        url("/bilder/premium_vector-1713364393085-0fdda13ec7cd.avif");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:800px;
+    text-align: center;
+}
+
+.li-recept {
+  list-style-type: none;
+  margin: 10px;
+  padding: 10px;
+  display: inline-block;
+  border-radius: px;
+
+}
