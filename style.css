@@ -14,7 +14,7 @@
 
 }
 
-a{
+.li-a{
    display: inline-block;
     padding: 12px 20px;
     margin: 5px;
@@ -47,8 +47,8 @@ h2{
 
 .search-box button {
   position: absolute;
-  right: 6px;
-  top: 10%;
+  right: 5px;
+  top: 20%;
   transform: translateY(-50%);
   width: 38px;
   height: 38px;
@@ -96,4 +96,26 @@ input:hover{
   display: inline-block;
   border-radius: px;
 
+}
+
+.navbar{
+    background: #57b54a;
+    font-family: Poppins, sans-serif;
+    padding-right: 15px;
+    padding-left: 15px;
+    border: 2px solid purple;
+    color:white
+}
+
+
+
+.navdiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar li{
+    list-style: none;
+    display: inline-block;
 }
