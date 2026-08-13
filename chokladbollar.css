@@ -1,57 +1,72 @@
-:root {
-  --checkbox-border-color: #8b8c89;
-  --checkbox-checked-color: #16be4b;
-  --checkbox-hover-color: #a3cef1;
-  --checkbox-disabled-bg-color: #d9d9d9;
+.ingredient {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    cursor: pointer;
+
+    font-size: 20px;
+    margin: 10px 0;
 }
 
-input{
-  display:block;
+
+.ingredient input {
+    display: none;
 }
 
-input[type="checkbox"] {
-  box-sizing: border-box;
-  width: 20px;
-  height: 20px;
-  margin: 6px;
-  padding: 0;
-  border: 2px solid var(--checkbox-border-color);
-  appearance: none;
-  background-color: transparent;
-  outline: none;
-  transition: outline 0.1s;
+
+.checkmark {
+    width: 24px;
+    height: 24px;
+
+    border: 2px solid #888;
+    border-radius: 6px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.2s;
 }
 
-input[type="checkbox"]:checked {
-  background-size: cover;
-  padding: 2px;
+
+.ingredient input:checked + .checkmark {
+    background-color: #274e02;
+    border-color: #274e02;
 }
 
-input[type="checkbox"]:not(:disabled):checked {
-  border-color: var(--checkbox-checked-color);
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 32 32" xml:space="preserve"><path style="fill: %23274c77" d="M11.941,28.877l-11.941-11.942l5.695-5.696l6.246,6.246l14.364-14.364L32,8.818"/></svg>');
+.ingredient input:checked + .checkmark::after {
+    content: "✓";
+    color: white;
+    font-size: 18px;
+
+    animation: checkAnimation 0.2s ease;
 }
 
-input[type="checkbox"]:disabled {
-  background-color: var(--checkbox-disabled-bg-color);
+.ingredient input:checked ~ .ingredient-text {
+    text-decoration: line-through;
+    opacity: 0.5;
 }
 
-input[type="checkbox"]:disabled:checked {
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 32 32" xml:space="preserve"><path style="fill: %238b8c89" d="M11.941,28.877l-11.941-11.942l5.695-5.696l6.246,6.246l14.364-14.364L32,8.818"/></svg>');
-}
+@keyframes checkAnimation {
+    0% {
+        transform: scale(0);
+    }
 
-input[type="checkbox"]:focus-visible {
-  outline: 6px solid var(--checkbox-hover-color);
-  transform: scale(1.05);
-}
+    70% {
+        transform: scale(1.2);
+    }
 
+    100% {
+        transform: scale(1);
+    }
+}
 
 .navbar{
     background: #57b54a;
     font-family: Poppins, sans-serif;
     padding-right: 15px;
     padding-left: 15px;
-    border: 2px solid purple;
     color:white
 }
 
